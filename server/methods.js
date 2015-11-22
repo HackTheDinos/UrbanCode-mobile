@@ -5,7 +5,7 @@ var API_PREFIX = API_DOMAIN + '/api/v1';
 Meteor.startup(function() {
   Meteor.methods({
     login: function(username, password) {
-      var response = Meteor.http.post(API_PREFIX + '/sessions', {
+      var response = HTTP.post(API_PREFIX + '/sessions', {
         params: {
           username: username,
           password: password
@@ -16,7 +16,7 @@ Meteor.startup(function() {
     },
 
     register: function(username, password) {
-      var response = Meteor.http.post(API_PREFIX + '/users', {
+      var response = HTTP.post(API_PREFIX + '/users', {
         params: {
           username: username,
           password: password
@@ -27,12 +27,12 @@ Meteor.startup(function() {
     },
 
     logout: function(auth_token) {
-      var response = Meteor.http.del(API_PREFIX + '/sessions/' + auth_token);
+      var response = HTTP.del(API_PREFIX + '/sessions/' + auth_token);
       return response;
     },
 
     submit_fossil: function(description, location, date, photo, auth_token) {
-      var response = Meteor.http.post(API_PREFIX + '/submissions', {
+      var response = HTTP.post(API_PREFIX + '/submissions', {
         params: {
           description: description,
           location: location,

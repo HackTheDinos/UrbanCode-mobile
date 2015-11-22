@@ -12,3 +12,5 @@ App.info({
 // Set PhoneGap/Cordova preferences
 App.setPreference('BackgroundColor', '0xffffffff');
 App.setPreference('HideKeyboardFormAccessoryBar', true);
+
+App.accessRule('*');
