@@ -1,0 +1,14 @@
+<template name="home">
+  <div class="ui center aligned row">
+    <h1 class="ui sixteen wide column">
+      Fossil Findr
+    </h1>
+  </div>
+
+  {{#if logged_in}}
+    {{> signedIn}}
+  {{else}}
+    {{> signedOut}}
+  {{/if}}
+
+</template>

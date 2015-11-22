@@ -1,0 +1,16 @@
+<template name="signedIn">
+  <div class="ui center aligned row">
+    <div class="ui sixteen wide column">
+      <a href="/submissions/new" class="ui blue button">
+        Submit fossil
+      </a>
+    </div>
+  </div>
+  <div class="ui center aligned row">
+    <div class="ui sixteen wide column">
+      {{#if logged_in}}
+      <button id="log-out" class="ui red button">Log out</button>
+      {{/if}}
+    </div>
+  </div>
+</template>

@@ -1,0 +1,48 @@
+<template name="newSubmission">
+  <div class="ui center aligned row">
+    <div class="ui sixteen wide column">
+      <h1>Fossil submission</h1>
+    </div>
+  </div>
+
+  {{#if errors}}
+    <div class="ui center aligned row">
+      <div class="ui sixteen wide column">
+        <div class="ui negative message">
+          {{ errors }}
+        </div>
+      </div>
+    </div>
+  {{/if}}
+
+  <div class="ui center aligned row">
+    <div class="ui fourteen wide centered column">
+      <form class="ui form">
+        <div class="field">
+          <textarea name="description" placeholder="Description" required></textarea>
+        </div>
+        <div class="field">
+          <input type="text" name="location" placeholder="Location" required>
+        </div>
+        <div class="field">
+          <input type="text" name="date" placeholder="Date found" required>
+        </div>
+        {{#if photo}}
+          <div class="field">
+            <div class="ui one cards">
+              <div class="card">
+                <img src="{{photo}}" alt="" class="ui image">
+              </div>
+            </div>
+          </div>
+        {{/if}}
+        <div class="field">
+          <button class="ui green button" id="take-photo">Take photo</button>
+        </div>
+        <button class="ui blue button" type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</template>

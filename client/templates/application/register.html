@@ -1,0 +1,39 @@
+<template name="register">
+  <div class="ui center aligned row">
+    <div class="ui sixteen wide column">
+      <h1>Sign up</h1>
+    </div>
+  </div>
+
+  {{#if errors}}
+    <div class="ui center aligned row">
+      <div class="ui sixteen wide column">
+        <div class="ui negative message">
+          {{ errors }}
+        </div>
+      </div>
+    </div>
+  {{/if}}
+
+  <div class="ui center aligned row">
+    <div class="ui fourteen wide centered column">
+      <form class="ui form">
+        <div class="field">
+          <input type="text" name="username" placeholder="Username">
+        </div>
+        <div class="field">
+          <input type="password" name="password" placeholder="Password">
+        </div>
+        <button class="ui blue button" type="submit">
+          Sign up
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="ui center aligned row">
+    <div class="ui sixteen wide column">
+      Already have an account? <a href="/login">Login!</a>
+    </div>
+  </div>
+</template>
