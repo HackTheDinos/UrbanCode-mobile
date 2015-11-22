@@ -1,5 +1,19 @@
+* {
+  font-family: 'Nunito' !important;
+}
+
 .vertical-align-center {
   align-items: center;
   display: flex;
   min-height: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 80px !important;
+  line-height: 1.5em;
+}
+
+.button {
+  font-size: 18px !important;
 }

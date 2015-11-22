@@ -1,5 +1,6 @@
 // var API_DOMAIN = 'http://localhost:3000';
-var API_DOMAIN = 'http://635c75e6.ngrok.com';
+// var API_DOMAIN = 'http://635c75e6.ngrok.com';
+var API_DOMAIN = 'http://76b9ada7.ngrok.com'
 var API_PREFIX = API_DOMAIN + '/api/v1';
 
 Meteor.startup(function() {
